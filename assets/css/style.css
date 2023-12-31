@@ -4,15 +4,25 @@ body {
 }
 
 #quiz-container {
+    font-size: 45px;
     display: block;
     color: #E7DCD4;
     background-color: #884F56;
-    border: 40px solid #E7DCD4;
+    border: 30px solid #E7DCD4;
     border-radius: 92px;
     box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
     margin: 60px auto;
     padding: 20px;
     width: 80vw;
+    text-align: center;
+}
+
+#startBtn{
+    font-size: 35px;
+    color: #884f56;
+    background-color: #E7DCD4;
+    border: 10px;
+    border-radius: 40px;
     text-align: center;
 }
 
