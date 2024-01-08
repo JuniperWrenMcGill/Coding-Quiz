@@ -87,6 +87,7 @@ function handleOptionClick(event) {
   } else {
       // End of the quiz
       console.log("Quiz completed!");
+      showModal()
   }
 }
 
