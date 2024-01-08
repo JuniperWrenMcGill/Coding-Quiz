@@ -1,6 +1,4 @@
-var timer;
-var seconds = 60;
-const questions = [
+const quizQuestions = [
     {
       question: "What is JavaScript?",
       options: ["A programming language", "My favorite cat", "A clothing brand"],
@@ -19,6 +17,7 @@ const questions = [
       
   ];
 
+  let currentQuestionIndex = 0;
 
 //   Start the game
 
@@ -35,3 +34,46 @@ function startQuiz() {
 
 // Add an event listener to the button
 document.getElementById('startBtn').addEventListener("click", startQuiz);
+
+function showQuestion() {
+    const currentQuestion = quizQuestions[currentQuestionIndex];
+
+  // Display the question and options in the HTML
+  const quizContainer = document.getElementById('quiz-container');
+  quizContainer.innerHTML = `
+    <h2>${currentQuestion.question}</h2>
+    <ul>
+      ${currentQuestion.options.map(option => `<li>${option}</li>`).join('')}
+    </ul>
+  `;
+  // Add event listeners  to the options
+  const options = quizContainer.querySelectorAll('li');
+  options.forEach(option => {
+      option.addEventListener('click', handleOptionClick);
+  });
+}
+
+function handleOptionClick(event) {
+  const selectedOption = event.target.textContent;
+  const currentQuestion = quizQuestions[currentQuestionIndex];
+
+  if (selectedOption === currentQuestion.answer) {
+      // Correct answer
+      console.log('Correct!');
+  } else {
+      // Incorrect answer
+      console.log('Incorrect!');
+  }
+
+  // Move to the next question
+  currentQuestionIndex++;
+
+  // Check if there are more questions
+  if (currentQuestionIndex < quizQuestions.length) {
+      // Wait for a brief moment to allow the user to see feedback before moving to the next question
+      setTimeout(showQuestion, 1000);
+  } else {
+      // End of the quiz
+      console.log("Quiz completed!");
+  }
+}
