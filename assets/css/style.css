@@ -60,6 +60,7 @@ body {
 #high-scores p {
   margin: 5px 0; 
   font-size: 40px; 
+  content: center;
   background-color: #E7DCD4;
   color: #884f56;
   margin-left: 261px;

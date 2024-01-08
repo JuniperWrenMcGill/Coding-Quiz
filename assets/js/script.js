@@ -165,10 +165,6 @@ function displayHighScores() {
   // replace 'highScoresContainer' with the ID or class of the element where you want to display the scores
   document.getElementById('high-scores').innerHTML = highScoresHTML;
 
-  // how the modal or update the UI to display the high scores
-  // Replace 'highScoresModal' with the ID or class of the modal element
-  document.getElementById('highScoresModal').style.display = 'block';
 }
-
 // Example: Add an event listener to a button or link to trigger the display of high scores
 document.getElementById('high-scoresBtn').addEventListener('click', displayHighScores);
