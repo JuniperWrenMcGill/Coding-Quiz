@@ -26,6 +26,18 @@ body {
     text-align: center;
 }
 
+#timer-container{
+    font-size: 35px;
+    color: #884f56;
+    background-color: #E7DCD4;
+    border: 20px;
+    border-radius: 50px;
+    text-align: center;
+    margin-left: 180px;
+    margin-right: 170px;
+}
+
+
 
 
 
