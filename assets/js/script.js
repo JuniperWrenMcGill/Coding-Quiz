@@ -43,10 +43,10 @@ function showQuestion() {
   quizContainer.innerHTML = `
     <h2>${currentQuestion.question}</h2>
     <ul style="list-style: none; padding: 0;">
-      ${currentQuestion.options.map(option => `<li>${option}</li>`).join('')}
+    ${currentQuestion.options.map(option => `<li style="border: 3px solid #ccc; background-color: #492b3a; margin: 20px; padding: 20px;">${option}</li>`).join('')}
     </ul>
   `;
-  
+
   // Add event listeners  to the options
   const options = quizContainer.querySelectorAll('li');
   options.forEach(option => {
