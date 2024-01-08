@@ -20,6 +20,7 @@ const quizQuestions = [
   let currentQuestionIndex = 0;
   let timer;
   let remainingTime = 30; // Initial time in seconds
+  let timerValue = 30
 
 
 //   Start the game
@@ -71,7 +72,7 @@ function handleOptionClick(event) {
       // Incorrect answer
       console.log('Incorrect!');
       // Decrease the timer by 5 seconds
-      decreaseTimer(10);
+      timerValue -=10;
   }
 
   // Move to the next question
@@ -106,18 +107,18 @@ function startTimer() {
   }, 1000); // 1000 milliseconds = 1 second
 }
 
-// function to decrease the timer by a specified number of seconds
-function decreaseTimer(seconds) {
-    // decrease the remaining time by the specified number of seconds
-    remainingTime = Math.max(remainingTime - seconds, 0);
+// // function to decrease the timer by a specified number of seconds
+// function decreaseTimer(seconds) {
+//     // decrease the remaining time by the specified number of seconds
+//     remainingTime = Math.max(remainingTime - seconds, 0);
 
-    // update the timer element with the new value
-    document.getElementById('timer').innerText = remainingTime;
+//     // update the timer element with the new value
+//     document.getElementById('timer').innerText = remainingTime;
 
-    // check if the timer has reached 0
-    if (remainingTime === 0) {
-        clearInterval(timer); // stop the timer
-        console.log('Time is up');
-        // add your logic for when time is up here
-    }
-}
+//     // check if the timer has reached 0
+//     if (remainingTime === 0) {
+//         clearInterval(timer); // stop the timer
+//         console.log('Time is up');
+//         // add your logic for when time is up here
+//     }
+// }
