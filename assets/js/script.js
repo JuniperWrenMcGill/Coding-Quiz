@@ -87,7 +87,7 @@ function handleOptionClick(event) {
   } else {
       // End of the quiz
       console.log("Quiz completed!");
-      showModal()
+      promptForInitials()
   }
 }
 
@@ -101,7 +101,7 @@ function startTimer() {
       if (timerValue <= 0) {
           clearInterval(timer); // Stop the timer
           console.log('Time is up');
-          showModal()
+          promptForInitials()
       } else {
           timerValue--; // Decrease the timer by one second
       }
