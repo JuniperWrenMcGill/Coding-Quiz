@@ -21,6 +21,7 @@ const quizQuestions = [
   let timer;
   let remainingTime = 30; // Initial time in seconds
   let timerValue = 30
+  let userScore = 0
 
 
 //   Start the game
@@ -68,6 +69,7 @@ function handleOptionClick(event) {
   if (selectedOption === currentQuestion.answer) {
       // Correct answer
       console.log('Correct!');
+      userScore++;
   } else {
       // Incorrect answer
       console.log('Incorrect!');
@@ -88,37 +90,62 @@ function handleOptionClick(event) {
   }
 }
 
-// function to start the timer
+// start the timer
 function startTimer() {
-  // Set an initial timer value
-  let timerValue = 30;
-
-  // display and update the timer every second
+  // Display and update the timer every second
   timer = setInterval(function () {
       document.getElementById('timer').innerText = timerValue;
-      // check if the timer has reached 0
+
+      // Check if the timer has reached 0
       if (timerValue <= 0) {
           clearInterval(timer); // Stop the timer
           console.log('Time is up');
-          // ADD LOGIC FOR WHEN QUIZ IS DONE HERE
+          showModal()
       } else {
           timerValue--; // Decrease the timer by one second
       }
   }, 1000); // 1000 milliseconds = 1 second
 }
 
-// // function to decrease the timer by a specified number of seconds
-// function decreaseTimer(seconds) {
-//     // decrease the remaining time by the specified number of seconds
-//     remainingTime = Math.max(remainingTime - seconds, 0);
+// show the modal
+function showModal() {
+  document.getElementById('modal').style.display = 'block';
+}
 
-//     // update the timer element with the new value
-//     document.getElementById('timer').innerText = remainingTime;
+// hide the modal
+function hideModal() {
+  document.getElementById('modal').style.display = 'none';
+}
 
-//     // check if the timer has reached 0
-//     if (remainingTime === 0) {
-//         clearInterval(timer); // stop the timer
-//         console.log('Time is up');
-//         // add your logic for when time is up here
-//     }
-// }
+// prompt user for initials
+function promptForInitials() {
+  showModal();
+  document.getElementById('saveButton').addEventListener('click', savePlayerInfo);
+}
+
+// save player information in local storage
+function savePlayerInfo() {
+  const initials = document.getElementById('high-score').value;
+  if (initials) {
+    // grab existing player information from local storage
+    const existingPlayerInfo = JSON.parse(localStorage.getItem("playerInfo")) || [];
+
+    // add the new player's information
+    existingPlayerInfo.push({ initials, score: userScore });
+
+   // save the updated player information back to local storage
+    localStorage.setItem("playerInfo", JSON.stringify(existingPlayerInfo));
+
+    // hide the modal after saving
+    hideModal();
+  } else {
+    alert("Please enter your initials.");
+  }
+}
+
+// call promptForInitials when the quiz is completed or the timer reaches 0
+function onQuizComplete() {
+  console.log("Quiz completed!");
+  console.log("Final Score:", userScore);
+  promptForInitials();
+}
