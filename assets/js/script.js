@@ -13,8 +13,17 @@ const quizQuestions = [
         question: "Which operator is used for equality comparison in JavaScript?",
         options: ["==", "===", "="],
         answer: "==="
-      },  
-      
+    },  
+    {
+      question: "What does the acronym DOM stand for in web development?",
+      options: ["Document Object Model", "Document Order Model", "Data Object Model"],
+      answer: "Document Object Model"
+    },  
+    {
+      question: "What is the purpose of the fetch function in JavaScript?",
+      options: ["To manipulate the DOM", "To make asynchronous HTTP requests", "To create a loop"],
+      answer: "To make asynchronous HTTP requests"
+    },  
   ];
 
   let currentQuestionIndex = 0;
