@@ -28,9 +28,9 @@ const quizQuestions = [
 
   let currentQuestionIndex = 0;
   let timer;
-  let remainingTime = 60; // Initial time in seconds
-  let timerValue = 60
-  let userScore = 0
+  let remainingTime = quizQuestions.length * 15; // Initial time in seconds
+  let timerValue = quizQuestions.length * 15;
+  let userScore = 0;
 
 
 //   Start the game
@@ -152,13 +152,6 @@ function savePlayerInfo() {
   } else {
     alert("Please enter your initials.");
   }
-}
-
-// call promptForInitials when the quiz is completed or the timer reaches 0
-function onQuizComplete() {
-  console.log("Quiz completed!");
-  console.log("Final Score:", userScore);
-  promptForInitials();
 }
 
 function displayHighScores() {
