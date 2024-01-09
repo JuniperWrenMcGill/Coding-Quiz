@@ -1,110 +1,110 @@
 body {
-    background-color: #492b3a;
-    font-family: 'Roboto Condensed', sans-serif;
+  background-color: #492b3a;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 /* quiz container styling */
 #quiz-container {
-    font-size: 45px;
-    display: block;
-    color: #E7DCD4;
-    background-color: #884F56;
-    border: 30px solid #E7DCD4;
-    border-radius: 92px;
-    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
-    margin: 60px auto;
-    padding: 20px;
-    width: 80vw;
-    text-align: center;
+  font-size: 45px;
+  display: block;
+  color: #E7DCD4;
+  background-color: #884F56;
+  border: 30px solid #E7DCD4;
+  border-radius: 92px;
+  box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+  margin: 60px auto;
+  padding: 20px;
+  width: 80vw;
+  text-align: center;
 }
 /*  start button styling */
 #startBtn{
-    font-size: 35px;
-    color: #884f56;
-    background-color: #E7DCD4;
-    border: 10px;
-    border-radius: 40px;
-    text-align: center;
+  font-size: 35px;
+  color: #884f56;
+  background-color: #E7DCD4;
+  border: 10px;
+  border-radius: 40px;
+  text-align: center;
 }
 /* timer container styling  */
 #timer-container{
-    font-size: 35px;
-    color: #884f56;
-    background-color: #E7DCD4;
-    border: 20px;
-    border-radius: 20px;
-    text-align: center;
-    margin-left: 180px;
-    margin-right: 170px;
+  font-size: 35px;
+  color: #884f56;
+  background-color: #E7DCD4;
+  border: 20px;
+  border-radius: 20px;
+  text-align: center;
+  margin-left: 180px;
+  margin-right: 170px;
 }
 
 /* highscores styling */
 #high-scoresBtn{
-    font-size: 35px;
-    color: #884f56;
-    background-color: #E7DCD4;
-    border: 20px;
-    border-radius: 20px;
-    text-align: center;
-    margin-left: 891px;
-    margin-right: 859px;
-    margin-top: 15px;
-    
+  font-size: 35px;
+  color: #884f56;
+  background-color: #E7DCD4;
+  border: 20px;
+  border-radius: 20px;
+  text-align: center;
+  margin-left: 891px;
+  margin-right: 859px;
+  margin-top: 15px;
+  
 }
 
 #high-scores {
-  max-height: 300px; 
-  overflow-y: auto; /* Add a vertical scrollbar if the content overflows the container */
-  padding: 10px; /* Add some padding to the high scores container */
+max-height: 300px; 
+overflow-y: auto; /* Add a vertical scrollbar if the content overflows the container */
+padding: 10px; /* Add some padding to the high scores container */
 }
 
 #high-scores p {
-  margin: 5px 0; 
-  font-size: 40px; 
-  content: center;
-  background-color: #E7DCD4;
-  color: #884f56;
-  margin-left: 261px;
-  margin-right: 223px;
-  border:10px;
-  border-radius: 20px;
+margin: 5px 0; 
+font-size: 40px; 
+content: center;
+background-color: #E7DCD4;
+color: #884f56;
+margin-left: 261px;
+margin-right: 223px;
+border:10px;
+border-radius: 20px;
 }
 
 /* Hide the modal by default */
 #highScoresModal {
-  display: none; 
+display: none; 
 }
 
 #modal {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 35px;
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px #492b3a;
-  text-align: center;
+font-family: 'Roboto Condensed', sans-serif;
+font-size: 35px;
+display: none;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+padding: 20px;
+background-color: #fff;
+box-shadow: 0 0 10px #492b3a;
+text-align: center;
 }
 
 #modal h2 {
-  color: #492b3a;
+color: #492b3a;
 }
 
 #modal input {
-  font-size: 40px;
-  padding: 8px;
-  margin: 8px 0;
-  color:#492b3a;
+font-size: 40px;
+padding: 8px;
+margin: 8px 0;
+color:#492b3a;
 }
 
 #modal button {
-  font-size: 40px;
-  padding: 10px;
-  background-color: #E7DCD4;
-  color: #492b3a;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
+font-size: 40px;
+padding: 10px;
+background-color: #E7DCD4;
+color: #492b3a;
+border: none;
+border-radius: 20px;
+cursor: pointer;
 }

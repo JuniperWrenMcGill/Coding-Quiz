@@ -28,8 +28,8 @@ const quizQuestions = [
 
   let currentQuestionIndex = 0;
   let timer;
-  let remainingTime = 30; // Initial time in seconds
-  let timerValue = 30
+  let remainingTime = 60; // Initial time in seconds
+  let timerValue = 60
   let userScore = 0
 
 
@@ -96,6 +96,7 @@ function handleOptionClick(event) {
   } else {
       // End of the quiz
       console.log("Quiz completed!");
+      clearInterval(timer); // Stop the timer
       promptForInitials()
   }
 }
