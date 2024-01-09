@@ -44,6 +44,7 @@ function startQuiz() {
 
     // Start timer
     startTimer();
+    document.getElementById('timer-container').classList.remove("hide");
 
     // Show the first question
     showQuestion();
@@ -149,6 +150,7 @@ function savePlayerInfo() {
 
     // hide the modal after saving
     hideModal();
+    document.getElementById('high-scores').classList.remove("hide");
   } else {
     alert("Please enter your initials.");
   }
