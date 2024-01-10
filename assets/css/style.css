@@ -60,7 +60,7 @@ padding: 10px; /* Add some padding to the high scores container */
 #high-scores p {
 margin: 5px 0; 
 font-size: 40px; 
-content: center;
+content: auto;
 background-color: #E7DCD4;
 color: #884f56;
 margin-left: 261px;
@@ -119,9 +119,11 @@ cursor: pointer;
   border-radius: 20px;
   margin-left: 1859px;
   margin-right: -97px;
-  margin-top: 24px;
+  margin-top: 24px;  
 }
 
 .hide {
   display: none;
 }
+
+/* insert media queries below */
