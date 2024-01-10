@@ -18,7 +18,7 @@ Welcome to the Coding Quiz App! This web-based application allows users to test 
 
 ## Installation
 
-This is a web-based application, so there's no need for installation. Simply access the app through your web browser.
+This is a web-based application, so there's no need for installation. Simply access the app through your web browser by going to <a href="https://juniperwrenmcgill.github.io/Coding-Quiz/" target="_blank">https://juniperwrenmcgill.github.io/Coding-Quiz/</a>.
 
 ## Usage
 
