@@ -109,6 +109,19 @@ border-radius: 20px;
 cursor: pointer;
 }
 
+#retry-btn{
+  margin: 5px 0; 
+  font-size: 40px;
+  content: center;
+  background-color: #E7DCD4;
+  color: #884f56;
+  border: 20px;
+  border-radius: 20px;
+  margin-left: 1859px;
+  margin-right: -97px;
+  margin-top: 24px;
+}
+
 .hide {
   display: none;
 }

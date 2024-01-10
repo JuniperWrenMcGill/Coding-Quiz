@@ -32,7 +32,6 @@ const quizQuestions = [
   let timerValue = quizQuestions.length * 15;
   let userScore = 0;
 
-
 //   Start the game
 
 function startQuiz() {
@@ -90,7 +89,7 @@ function handleOptionClick(event) {
   // Move to the next question
   currentQuestionIndex++;
 
-  // Check if there are more questions
+  // check if there are more questions
   if (currentQuestionIndex < quizQuestions.length) {
       // Wait for a brief moment to allow the user to see feedback before moving to the next question
       setTimeout(showQuestion, 1000);
@@ -104,11 +103,11 @@ function handleOptionClick(event) {
 
 // start the timer
 function startTimer() {
-  // Display and update the timer every second
+  // display and update the timer every second
   timer = setInterval(function () {
       document.getElementById('timer').innerText = timerValue;
 
-      // Check if the timer has reached 0
+      // check if the timer has reached 0
       if (timerValue <= 0) {
           clearInterval(timer); // Stop the timer
           console.log('Time is up');
@@ -171,5 +170,27 @@ function displayHighScores() {
   document.getElementById('high-scores').innerHTML = highScoresHTML;
 
 }
-// Example: Add an event listener to a button or link to trigger the display of high scores
+// event listener to a button or link to trigger the display of high scores
 document.getElementById('high-scoresBtn').addEventListener('click', displayHighScores);
+
+
+  function retryGame() {
+    // Reset all relevant variables to their initial state
+    currentQuestionIndex = 0;
+    timerValue = quizQuestions.length * 15;
+    userScore = 0;
+  
+    // Reset the display of various elements
+    window.location.reload();  // Reset to initial content
+    document.getElementById('timer-container').classList.add('hide');  // Hide the timer container
+    document.getElementById('high-scores').classList.add('hide');  // Hide the high scores container
+    document.getElementById('high-scoresBtn').style.display = 'none';  // Hide the high scores button
+  
+
+  
+    // Start the quiz again
+    startQuiz();
+  }
+
+// Event listener to a button or link to restart the game
+document.getElementById('retry-btn').addEventListener('click', retryGame);
